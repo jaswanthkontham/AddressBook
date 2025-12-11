@@ -3,14 +3,14 @@
 
 #define MAX_CONTACTS 100
 
-typedef struct {
+typedef struct { //defining a structure Contact
     char name[50];
     char phone[20];
     char email[50];
 } Contact;
 
-typedef struct {
-    Contact contacts[100];
+typedef struct { //defining a structure AddressBook
+    Contact contacts[100]; //nested structure array
     int contactCount;
 } AddressBook;
 
@@ -21,5 +21,4 @@ void deleteContact(AddressBook *addressBook);
 void listContacts(AddressBook *addressBook, int sortCriteria);
 void initialize(AddressBook *addressBook);
 void saveContactsToFile(AddressBook *AddressBook);
-
 #endif

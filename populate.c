@@ -17,9 +17,10 @@ static Contact dummyContacts[] = {
 
 void populateAddressBook(AddressBook* addressBook)
 {
-    int numDummyContacts = sizeof(dummyContacts) / sizeof(dummyContacts[0]);
+    int numDummyContacts = sizeof(dummyContacts) / sizeof(dummyContacts[0]); // Calculate number of dummy contacts
+   // Add dummy contacts to address book until maximum capacity is reached
     for (int i = 0; i < numDummyContacts && addressBook->contactCount < MAX_CONTACTS; ++i) 
     {
-        addressBook->contacts[addressBook->contactCount++] = dummyContacts[i];
-    }
+        addressBook->contacts[addressBook->contactCount++] = dummyContacts[i];// Add dummy contact to address book
+    } 
 }

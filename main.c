@@ -5,7 +5,7 @@
 int main() {
     int choice;
     AddressBook addressBook;
-    initialize(&addressBook); // Initialize the address book
+    initialize(&addressBook); // Initializing the address book
 
     do {
         printf("\nAddress Book Menu:\n");
@@ -19,7 +19,7 @@ int main() {
         printf("7. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        if(choice<1 || choice>7)
+        if(choice<1 || choice>7) //if choice is invalid
         {
             printf("\033[0;31mERROR: Invalid Choice! Please Enter Valid Choice from Menu\033[0m\n");
             return 0;
@@ -44,12 +44,12 @@ int main() {
             printf("Enter your choice: ");
             int sortChoice;
             scanf("%d", &sortChoice);         
-                listContacts(&addressBook,sortChoice);
+                listContacts(&addressBook,sortChoice); //listing contacts based on sort criteria name/phone/email
                 break;
             case 6:
                 printf("\33[32mSaving and Exiting...\33[0m\n");
                 sleep(1);
-                saveContactsToFile(&addressBook);
+                saveContactsToFile(&addressBook); //saving contacts to file
                 break;
             case 7:
                 return 0;

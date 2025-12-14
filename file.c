@@ -15,7 +15,8 @@ void saveContactsToFile(AddressBook *addressBook)
         //write each contact's details to file in CSV format using fprintf because fprintf can format output in human readable way
         fprintf(fp,"%s,%s,%s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
     }
-    printf("\33[32mContacts Saved Successfully\33[0m\n");
+    printf("\33[32;1mContacts Saved Successfully\33[0m\n");
+    printf("\33[32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\33[0m\n");
     fclose(fp); //close file after writing
 }
 
